@@ -49,8 +49,8 @@ void heapSort(int arr[], int n)
 void printArray(int arr[], int n)
 {
 	for (int i = 0; i < n; ++i)
-		cout << arr[i] << " ";
-	cout << "\n";
+		printf("%d ",arr[i]);
+        printf("\n");
 }
 
 // Driver code
@@ -61,6 +61,6 @@ int main()
 
 	heapSort(arr, n);
 
-	cout << "Sorted array is \n";
+	printf("Sorted array is \n");
 	printArray(arr, n);
 }
