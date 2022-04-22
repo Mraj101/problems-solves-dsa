@@ -1,2 +1,0 @@
-int changelength();
-    // int getlength();
