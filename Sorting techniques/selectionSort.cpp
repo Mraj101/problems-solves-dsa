@@ -18,7 +18,6 @@ void SelectionSort(int arr[],int n)
     int i;
     int j;//variable for moving the indexes
     int k;//variable for storing the position of minimum number
-    int temp=arr[i];
     for(i=0;i<n-1;i++)
     {
         for( j=k=i;j<n;j++)

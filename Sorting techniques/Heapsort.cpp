@@ -1,5 +1,5 @@
 // C++ program for implementation of Heap Sort
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
