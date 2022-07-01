@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int Func(int i, int j)
+int Func(int a, int b)
 {
     int maxcycle_length = 1;
     int cycle_length;
-    int nbr;
-    if(i>j)
-        swap(i,j);
-    for (nbr = i; nbr <= j; nbr++)
+    int i;
+    
+    if(a>b)
+        swap(a,b);
+
+    for (i = a; i <= b; i++)
     {
-        int n = nbr;
+        int n = i;
         cycle_length = 1;
         while (n != 1)
         {
