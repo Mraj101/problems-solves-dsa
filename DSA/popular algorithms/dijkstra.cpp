@@ -1,13 +1,13 @@
-#include <stdio.h>
-#define INFINITY 9999
-#define MAX 10
+#include <stdio.h>    //header file
+#define INFINITY 9999 // 9999 defined as infinity
+#define MAX 10        // max is defined with 10
 
 // void Dijkstra(int Graph[MAX][MAX], int n, int start);
 
 void Dijkstra(int Graph[MAX][MAX], int n, int start)
 {
-    int cost[MAX][MAX], distance[MAX], pred[MAX];
-    int visited[MAX], count, mindistance, nextnode, i, j;
+    int cost[MAX][MAX], distance[MAX], pred[MAX];         // declared arrays
+    int visited[MAX], count, mindistance, nextnode, i, j; // array and variables
 
     // Creating cost matrix
     for (i = 0; i < n; i++)
@@ -17,7 +17,7 @@ void Dijkstra(int Graph[MAX][MAX], int n, int start)
             else
                 cost[i][j] = Graph[i][j];
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n; i++) // setting the distance
     {
         distance[i] = cost[start][i];
         pred[i] = start;
@@ -59,10 +59,10 @@ void Dijkstra(int Graph[MAX][MAX], int n, int start)
 }
 int main()
 {
-    int n, u;
+    int n, u; // varibale declared where n is the size and u is the initial cost
     n = 7;
 
-    int Graph[7][7] =
+    int Graph[7][7] = // the cost adjacency is declared
         {
             {0, 0, 1, 2, 0, 0, 0},
             {0, 0, 2, 0, 0, 3, 0},
@@ -71,8 +71,8 @@ int main()
             {0, 0, 3, 0, 0, 2, 0},
             {0, 3, 0, 0, 2, 0, 1},
             {0, 0, 0, 1, 0, 1, 0}};
-    u = 2;
-    Dijkstra(Graph, n, u);
+    u = 2;                 // initial cost is 2
+    Dijkstra(Graph, n, u); // calling dijkastra funcion with 3 arguments
 
     return 0;
 }
