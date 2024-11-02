@@ -10,7 +10,7 @@ var arrayRankTransform = function(arr) {
 
 
     let sortedArr = [...arr];
-    for (let i = 0; i < sortedArr.length; i++) {
+    for (let i = 0; i < sortedArr.length-1; i++) {
         for (let j = i + 1; j < sortedArr.length; j++) {
             if (sortedArr[i] > sortedArr[j]) {
                 let temp = sortedArr[i];
@@ -31,6 +31,7 @@ var arrayRankTransform = function(arr) {
     }
 
     let result = new Array(arr.length); 
+    console.log(indexMap,"before iterating index map")
     for (let key in indexMap) {
         let indices = indexMap[key];  
         let currentRank = rankMap[key];  
